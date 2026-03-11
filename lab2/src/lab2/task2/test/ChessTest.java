@@ -22,11 +22,17 @@ public class ChessTest {
         Bishop bishop = new Bishop(new Position(3, 1)); // c1
         System.out.println("Bishop moves to g5 (diagonal): " + bishop.isLegalMove(new Position(7, 5))); // true
 
+
+
         Board board = new Board();
-        board.setPiece(3, 1, new Bishop(new Position(3,1)));
-        board.setPiece(2, 1, new Knight(new Position(2,1)));
-        board.setPiece(5, 5, new King(new Position(5, 5)));
+        board.setupStandartBoard();
         board.printBoard();
+
+//        board.setPiece(3, 1, new Bishop(new Position(3,1)));
+//        board.setPiece(2, 1, new Knight(new Position(2,1)));
+//        board.setPiece(5, 5, new King(new Position(5, 5)));
+//        board.printBoard();
+
 
     }
 }
