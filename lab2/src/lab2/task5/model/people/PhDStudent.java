@@ -2,8 +2,9 @@ package lab2.task5.model.people;
 
 import lab2.task5.model.animals.Animal;
 import lab2.task5.model.animals.Dog;
+import problem4.interfaces.Chilieable;
 
-public class PhDStudent extends Person{
+public class PhDStudent extends Person implements Chilieable {
     private String major;
     private String speacilization;
 
@@ -27,6 +28,10 @@ public class PhDStudent extends Person{
     @Override
     public String getOccupation() {
         return  "PhD Student in " + major + ", focusing on " + speacilization;
+    }
+
+    public void chill() {
+        System.out.println("Can't chill I'm phd student yo. I'm glad If i sleep 4 hours in a row");
     }
 
 }

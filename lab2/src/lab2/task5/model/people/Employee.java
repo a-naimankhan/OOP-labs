@@ -1,6 +1,9 @@
 package lab2.task5.model.people;
 
-public class Employee extends Person{
+
+import problem4.interfaces.Speakable;
+
+public class Employee extends Person implements Speakable {
     private String profession;
 
     public Employee(String name , int age , String profession) {
@@ -24,5 +27,7 @@ public class Employee extends Person{
         return super.toString() + " [Position: " + profession + "]";
     }
 
-
+    public void sayHello() {
+        System.out.println("Hello from Employee");
+    }
 }

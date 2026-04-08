@@ -26,9 +26,9 @@ public abstract class Device {
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (o == this) return true;
 
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!o.getClass().equals(this.getClass()) || o == null) return false;
 
         Device device = (Device) o;
 
